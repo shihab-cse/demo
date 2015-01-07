@@ -1,0 +1,79 @@
+/* Sass Document */
+
+
+@import reset
+
+
+$font-primary : Helvetica, Arial, sans-serif
+$color-primary : #f00
+$size-primary : 20px
+
+body
+  font : 100% $font-primary
+  color : $color-primary
+  size : $size-primary
+
+.nav
+  ul
+    margin : 0
+    padding : 0
+    overflow : hidden
+  li
+    float : left
+    list-style : none
+    padding : 0 15px
+  
+  a
+    text-decoration : none
+    color : red
+  
+  a:hover
+    text-decoration : underline
+
+=border-radius2($radius)
+  -webkit-border-radius : $radius
+  -moz-border-radius : $radius
+  -ms-border-radius : $radius
+  -o-border-radius : $radius
+  border-radius : $radius
+.box
+  +border-radius2(20px)
+  width : 200px
+  height : 200px
+  background : red
+  
+.box2
+  +border-radius2(100px)
+  width : 200px
+  height : 200px
+  background : #006
+
+.message,.error,.warning
+  border : 1px solid #f00
+  padding : 10px
+  color : green
+
+.error
+  color : red
+
+.warning
+  color : #f0c
+
+
+p
+  @extend .error
+  
+.container
+  width: 100%
+
+article[role="main"]
+  float: left
+  width: 600px / 960px * 100%
+
+aside[role="complimentary"]
+  float : right
+  width : 359px / 960px * 100%
+ 
+
+
+
